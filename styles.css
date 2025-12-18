@@ -89,13 +89,13 @@ body {
 
 .contacts-tab {
   position: absolute;
-  right: 0px; /* виступає назовні */
+  right: 0px; 
   top: 0;
 
   width: 40px;
-  height: 140px;
+  height: 201px;
   background: #f0b400;
-  border-radius: 0 0px 0px 0;
+  border-radius: 14px 0px 0px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
