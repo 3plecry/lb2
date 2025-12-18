@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лаба CSS: position, float, прихований блок</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    h1 { letter-spacing: 0.3px; }
+
+    .note {
+      background: #fff3c8;
+      border-left: 6px solid #f0b400;
+      padding: 10px 12px;
+      margin: 12px 0;
+    }
+
+    #highlight {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    p.lead { font-size: 1.05rem; }
+
+    a:hover { text-decoration: none; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Демонстрація CSS</h1>
+    <p class="lead">
+      Тут є приклади <span id="highlight">inline</span>, <span id="highlight">internal</span> і <span id="highlight">external</span> CSS.
+    </p>
+
+    <span class="badge" style="background:#2b7cff; color:white; padding:6px 10px; border-radius:999px;">
+      Inline-стиль тут
+    </span>
+  </header>
+
+  <main class="page">
+    <nav class="top-nav">
+      <a href="#section1">Розділ 1</a>
+      <a href="#section2">Розділ 2</a>
+      <a href="#section3">Розділ 3</a>
+    </nav>
+
+    <section id="section1" class="card">
+      <h2>Float: обтікання текстом зображення</h2>
+
+      <img class="float-img" src="1.png" alt="Приклад" />
+
+      <p>
+        Це приклад властивості <b>float</b>. Зображення "плаває" ліворуч, а текст його обтікає.
+        Можна використовувати float також для навігації або дрібних блоків.
+      </p>
+      <p>
+        Додатковий текст, щоб було видно обтікання. Додатковий текст, щоб було видно обтікання.
+        Додатковий текст, щоб було видно обтікання.
+      </p>
+
+      <div class="clear"></div>
+
+      <div class="note">
+        Після float часто використовують "очищення" (clear), щоб наступні блоки не залазили під плаваючий елемент.
+      </div>
+    </section>
+
+    <section id="section2" class="card relative-box">
+      <h2>Position: relative + absolute</h2>
+      <p>
+        Цей блок має <b>position: relative</b>. А бейдж у куті — <b>position: absolute</b>.
+      </p>
+
+      <div class="corner-badge">ABS</div>
+    </section>
+
+    <section id="section3" class="card">
+      <h2>Контент для прокрутки</h2>
+      <p>
+        Прокрути сторінку вниз - блок "Contacts" зліва залишиться на місці (бо він fixed).
+      </p>
+
+      <div class="long-content">
+        <p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p>
+        <p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p>
+        <p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p><p>Текст…</p>
+      </div>
+    </section>
+  </main>
+
+  <aside class="contacts-panel" aria-label="Contacts panel">
+    <div class="contacts-tab">Contacts</div>
+
+    <div class="contacts-body">
+      <div class="contacts-row">
+        <img src="https://nure.ua/wp-content/uploads/Benchmarking/nure-1.jpg" alt="NURE" width="80">
+        <div>
+          <div><b>Сайт</b></div>
+          <a href="https://nure.ua/" target="_blank" rel="noopener">https://nure.ua/</a>
+        </div>
+      </div>
+
+      <div class="contacts-row">
+        <div class="logo">@</div>
+        <div>
+          <div><b>Email</b></div>
+          <span>info@example.com</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <small>Лабораторна робота 2</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #ffe8ad;
+  color: #1a1a1a;
+}
+
+.site-header {
+  padding: 20px;
+  background: #fff;
+  border-bottom: 4px solid #d8d8d8;
+}
+
+.page {
+  padding: 18px;
+  max-width: 980px;
+}
+
+.top-nav {
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.top-nav a {
+  margin-right: 12px;
+  color: #2b7cff;
+  text-decoration: underline;
+}
+
+/* Карточки */
+.card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;
+}
+
+/* Float */
+.float-img {
+  float: left;
+  margin: 0 12px 10px 0;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+.clear { clear: both; }
+
+/* relative + absolute */
+.relative-box {
+  position: relative;
+  min-height: 120px;
+}
+
+.corner-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* Контент для прокрутки */
+.long-content p {
+  margin: 10px 0;
+}
+
+/* Прихований фіксований блок Contacts */
+.contacts-panel {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* видно лише "хвостик" */
+  width: 320px;
+  margin-left: -280px; /* 320 - 40 = 280, лишаємо 40px видимими */
+  transition: margin-left 0.25s ease;
+
+  z-index: 999;
+}
+
+.contacts-panel:hover {
+  margin-left: 0; /* розгорнути повністю */
+}
+
+.contacts-tab {
+  position: absolute;
+  right: -40px; /* виступає назовні */
+  top: 0;
+
+  width: 40px;
+  height: 140px;
+  background: #f0b400;
+  border-radius: 0 14px 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* вертикальний текст */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.contacts-body {
+  background: #fff;
+  border-radius: 0 14px 14px 0;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.contacts-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contacts-row:last-child {
+  border-bottom: none;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #e9f1ff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.site-footer {
+  padding: 16px 20px;
+  background: #fff;
+  border-top: 4px solid #d8d8d8;
+}
